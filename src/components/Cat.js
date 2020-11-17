@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Image } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import Favourite from "./Favourite";
 import Vote from "./Vote";
 import styled from "styled-components";
@@ -10,6 +10,13 @@ const InfoBar = styled.div`
   justify-content: space-between;
   height: 40px;
   align-items: center;
+`;
+
+const CatImage = styled.div`
+  background-image: url(${(props) => props.url});
+  height: 250px;
+  max-width: 100%;
+  background-size: cover;
 `;
 
 function Cat(props) {
@@ -28,7 +35,7 @@ function Cat(props) {
   return (
     <Card raised>
       <Card.Content style={{ backgroundColor: "rgb(255,223,176)" }}>
-        <Image src={cat.url} alt="" width="100%" />
+        <CatImage url={cat.url} />
       </Card.Content>
       <Card.Content extra style={{ backgroundColor: "rgb(253,187,98)" }}>
         <InfoBar>

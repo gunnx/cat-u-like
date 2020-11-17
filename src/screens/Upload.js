@@ -84,7 +84,7 @@ function Upload() {
                 primary
                 type="submit"
                 onClick={uploadFile}
-                disabled={currentFile === undefined}
+                disabled={currentFile === undefined || progress > 0}
                 loading={progress > 0}
               >
                 Submit

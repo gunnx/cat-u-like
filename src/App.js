@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./components/Home";
-import Upload from "./components/Upload";
+import Home from "./screens/Home";
+import Upload from "./screens/Upload";
 import "./index.css";
 import styled from "styled-components";
 

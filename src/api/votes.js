@@ -1,5 +1,4 @@
 import http from "./http";
-import { SUB_ID } from "../config";
 
 const votes = async () => {
   try {

@@ -31,7 +31,7 @@ describe("api/vote", () => {
   });
 
   it("calls delete if a voteId is passed in", async () => {
-    const result = await vote(1, 0, 2);
+    await vote(1, 0, 2);
 
     expect(http.delete).toHaveBeenCalled();
     expect(http.delete).toHaveBeenCalledWith("votes/2");

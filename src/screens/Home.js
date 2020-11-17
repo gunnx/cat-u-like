@@ -37,7 +37,7 @@ function Home() {
     <Container>
       <Header as="h1">Cat-U-Like</Header>
       <Link to="/upload">
-        <Label content="Upload Cat" icon="mail" color="orange" />
+        <Label content="Upload Cat" icon="upload" color="orange" />
       </Link>
       <Divider />
       {!isLoading && cats.length > 0 && (
