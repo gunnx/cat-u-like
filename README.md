@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+#Cat-U-Like
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+See [Notes](NOTES.md) for development info
 
 ## Available Scripts
 
