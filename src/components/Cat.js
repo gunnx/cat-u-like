@@ -4,19 +4,13 @@ import Favourite from "./Favourite";
 import Vote from "./Vote";
 import styled from "styled-components";
 import Score from "./Score";
+import CatImage from "./CatImage";
 
 const InfoBar = styled.div`
   display: flex;
   justify-content: space-between;
   height: 40px;
   align-items: center;
-`;
-
-const CatImage = styled.div`
-  background-image: url(${(props) => props.url});
-  height: 250px;
-  max-width: 100%;
-  background-size: cover;
 `;
 
 function Cat(props) {
