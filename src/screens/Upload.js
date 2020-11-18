@@ -6,6 +6,7 @@ import {
   Button,
   Container,
   Divider,
+  Label,
   Form,
   Grid,
   Header,
@@ -81,7 +82,7 @@ function Upload() {
                 style={{ display: "hidden" }}
               />
               <Button
-                primary
+                color="orange"
                 type="submit"
                 onClick={uploadFile}
                 disabled={currentFile === undefined || progress > 0}
@@ -115,7 +116,9 @@ function Upload() {
         </Grid.Row>
       </Grid>
       <Divider />
-      <Link to="/">Return home</Link>
+      <Link to="/">
+        <Label icon="home" content="Return home" />
+      </Link>
     </Container>
   );
 }

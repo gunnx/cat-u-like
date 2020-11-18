@@ -10,6 +10,7 @@ const BackgroundCat = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border-radius: 5px;
 `;
 
 function CatImage(props) {
@@ -19,7 +20,7 @@ function CatImage(props) {
   if (size.width > 767) {
     return <BackgroundCat url={url} />;
   } else {
-    return <Image src={url} alt="" width="100%" />;
+    return <Image src={url} alt="" width="100%" rounded />;
   }
 }
 

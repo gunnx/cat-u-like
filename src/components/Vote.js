@@ -38,7 +38,7 @@ function Vote(props) {
         }}
       >
         <Icon
-          color="teal"
+          color="green"
           name={voteStatus === 1 ? "thumbs up" : "thumbs up outline"}
           size="big"
         />
@@ -57,7 +57,7 @@ function Vote(props) {
         }}
       >
         <Icon
-          color="brown"
+          color="red"
           name={voteStatus === 0 ? "thumbs down" : "thumbs down outline"}
           size="big"
         />

@@ -35,7 +35,9 @@ function Home() {
 
   return (
     <Container>
-      <Header as="h1">Cat-U-Like</Header>
+      <Header as="h1" style={{ color: "#fff" }}>
+        Cat-U-Like
+      </Header>
       <Link to="/upload">
         <Label content="Upload Cat" icon="upload" color="orange" />
       </Link>

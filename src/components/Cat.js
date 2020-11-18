@@ -28,10 +28,10 @@ function Cat(props) {
 
   return (
     <Card raised>
-      <Card.Content style={{ backgroundColor: "rgb(255,223,176)" }}>
+      <Card.Content>
         <CatImage url={cat.url} />
       </Card.Content>
-      <Card.Content extra style={{ backgroundColor: "rgb(253,187,98)" }}>
+      <Card.Content extra style={{ backgroundColor: "rgb(220,220,220)" }}>
         <InfoBar>
           <Score value={catScore} />
           <Vote
