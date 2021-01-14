@@ -22,20 +22,18 @@ function Favourite(props) {
   const [favId, setFavId] = useState(favouriteId);
 
   return (
-    <div>
-      <SimpleButton
-        onClick={() => {
-          handleFavourite(id, favId).then((newFavId) => {
-            if (newFavId) {
-              setFavId(newFavId);
-            }
-            setIsFav(!isFav);
-          });
-        }}
-      >
-        <HeartPaw width={40} height={40} filled={isFav} />
-      </SimpleButton>
-    </div>
+    <SimpleButton
+      onClick={() => {
+        handleFavourite(id, favId).then((newFavId) => {
+          if (newFavId) {
+            setFavId(newFavId);
+          }
+          setIsFav(!isFav);
+        });
+      }}
+    >
+      <HeartPaw width={40} height={40} filled={isFav} />
+    </SimpleButton>
   );
 }
 

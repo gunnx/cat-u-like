@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import Home from "./screens/Home";
 import Upload from "./screens/Upload";
+import ErrorBoundary from './components/ErrorBoundary'
 import "./index.css";
 import styled from "styled-components";
 
@@ -12,6 +12,7 @@ const Wrapper = styled.main`
 
 function App() {
   return (
+    <ErrorBoundary>
     <Wrapper>
       <Router>
         <Switch>
@@ -24,6 +25,7 @@ function App() {
         </Switch>
       </Router>
     </Wrapper>
+    </ErrorBoundary>
   );
 }
 

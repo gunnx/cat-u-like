@@ -9,7 +9,12 @@ import {
   Label,
 } from "semantic-ui-react";
 import Cat from "../components/Cat";
+import styled from 'styled-components'
 import * as APIService from "../api";
+
+const H1 = styled(Header)`
+  color: #fff;
+`
 
 function Home() {
   const [cats, setCats] = useState([]);
@@ -35,28 +40,26 @@ function Home() {
 
   return (
     <Container>
-      <Header as="h1" style={{ color: "#fff" }}>
+      <H1 as="h1">
         Cat-U-Like
-      </Header>
+      </H1>
       <Link to="/upload">
         <Label content="Upload Cat" icon="upload" color="orange" />
       </Link>
       <Divider />
       {!isLoading && cats.length > 0 && (
-        <>
-          <Card.Group itemsPerRow={4} doubling stackable>
-            {cats.map((cat) => {
-              // get scores
-              const catScores = scores.filter(
-                (score) => score.image_id === cat.id
-              );
-              return <Cat cat={cat} scores={catScores} key={cat.id} />;
-            })}
-          </Card.Group>
-        </>
+        <Card.Group itemsPerRow={4} doubling stackable>
+          {cats.map((cat) => {
+            // get scores
+            const catScores = scores.filter(
+              (score) => score.image_id === cat.id
+            );
+            return <Cat cat={cat} scores={catScores} key={cat.id} />;
+          })}
+        </Card.Group>
       )}
       {!isLoading && cats.length === 0 && (
-        <Container textAlign="center" style={{ minHeight: "500px" }}>
+        <Container textAlign="center">
           <Header as="h2" icon>
             <Link to="/upload">
               <Icon name="upload" />

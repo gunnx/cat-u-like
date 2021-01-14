@@ -23,7 +23,7 @@ function Vote(props) {
   const [voteStatus, setVoteStatus] = useState(vote?.value);
 
   return (
-    <div>
+    <>
       <SimpleButton
         onClick={() => {
           if (voteStatus === 1) {
@@ -62,7 +62,7 @@ function Vote(props) {
           size="big"
         />
       </SimpleButton>
-    </div>
+      </>
   );
 }
 
